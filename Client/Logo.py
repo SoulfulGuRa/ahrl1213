@@ -34,9 +34,9 @@ def draw():
     clear_canvas()
 
     main.draw(400, 300)
-    start.draw(400, 250)
-    option.draw(400, 200)
-    esc.draw(400, 150)
+    start.draw(330 + 193 / 2, 250)
+    option.draw(330 + 134 / 2, 200)
+    esc.draw(330 + 77 / 2, 150)
 
     update_canvas()
 
