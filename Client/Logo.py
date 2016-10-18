@@ -30,9 +30,7 @@ def exit():
     del(select)
 
 def update():
-    handle_events()
-    delay(0.01)
-
+    pass
 def draw():
     global main, start, option, esc, select
     global PosY
@@ -59,22 +57,19 @@ def handle_events():
                 PosY = 150
             else:
                 PosY -= 50
-            print("Down")
         elif event.type == SDL_KEYDOWN and event.key == SDLK_UP:
             if PosY == 250:
                 PosY = 250
             else:
                 PosY += 50
-            print("Up")
         elif event.type == SDL_KEYDOWN and event.key == SDLK_RETURN:
             if PosY == 150:
                 game_framework.quit()
             elif PosY == 200:
-                print("MapTool")
+                print("Enter MapTool")
             elif PosY == 250:
-                print("Stage")
+                print("Enter Stage")
                 game_framework.change_state(Stage)
-            print("Enter")
 
 def pause(): pass
 

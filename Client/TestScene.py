@@ -1,30 +1,30 @@
 import game_framework
 from pico2d import *
-import Background
-import TestScene
 import Player
+import Scarab
 
-name = "Stage"
+name = "TestScene"
 
 def enter():
-   global background, player
-   background = Background.Background()
+   global player, scarab
    player = Player.Player()
+   scarab = Scarab.Scarab(600, 20)
 
 def exit():
-    global background, player
-    del(background)
+    global player, scarab
     del(player)
+    del(scarab)
 
 def update():
-    background.update()
     player.update()
+    scarab.update()
+
     delay(0.05)
 
 def draw():
     clear_canvas()
 
-    background.draw()
+    scarab.draw()
     player.draw()
 
     update_canvas()
@@ -36,14 +36,9 @@ def handle_events():
             game_framework.quit()
         elif event.type == SDL_KEYDOWN and event.key == SDLK_ESCAPE:
             game_framework.quit()
-        elif event.type == SDL_KEYDOWN and event.key == SDLK_RETURN:
-            print('Enter TestScene')
-            game_framework.change_state(TestScene)
         elif event.type == SDL_KEYUP:
-            background.handle_event(event)
             player.handle_event(event)
         elif event.type == SDL_KEYDOWN:
-            background.handle_event(event)
             player.handle_event(event)
 
 def pause(): pass
