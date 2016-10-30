@@ -20,6 +20,8 @@ def update():
     background.update()
     player.update()
     delay(0.05)
+    # Delay 부분 없애자 타임값 가져와서
+    # 루프 수정
 
 def draw():
     clear_canvas()
