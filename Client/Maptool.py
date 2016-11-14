@@ -9,13 +9,18 @@ name = "Stage"
 def enter():
    global background, tile
    global ScrollX, LeftDown, RightDown
+   global tileCntX, tileCntY, tileCX, tileCY, tileindex
    ScrollX = Static
    background = Background.Background()
    LeftDown = False
    RightDown = False
    tile = []
-   for y in range(0, 2):
-       for x in range(0, 20):
+   tileCntX = 16
+   tileCntY = 12
+   tileCX = 50
+   tileCY = 50
+   for y in range(0, tileCntY):
+       for x in range(0, tileCntX):
            tile.append(Tile.Tile(0, 0, x, y))
 
 def exit():
@@ -61,11 +66,19 @@ def handle_events():
             LeftDown = False
         elif event.type == SDL_KEYUP and event.key == SDLK_RIGHT:
             RightDown = False
+        elif event.type == SDL_MOUSEBUTTONDOWN and event.button == SDL_BUTTON_LEFT:
+            mapedit(event.x, event.y)
+        elif event.type == SDL_MOUSEBUTTONDOWN and event.button == SDL_BUTTON_RIGHT:
+            pass
 
-def pause(): pass
+def mapedit(mouseX, mouseY):
+    pass
 
+def pause():
+    pass
 
-def resume(): pass
+def resume():
+    pass
 
 
 

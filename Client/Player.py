@@ -34,7 +34,6 @@ class Player:
         ScrollX = Static
         self.mapscale = 2000
         self.x, self.y = 300, 150
-        #self.ScrollX = 0
         self.frame = 0
         self.state = self.IDLE
         self.Attack = False

@@ -15,17 +15,6 @@ class Tile:
         pass
 
     def draw(self):
-        #for x in range(0, 32):
-            #for y in range(0, 2):
-                #self.Image.clip_draw(
-                    #self.col * 16, # 이미지의 left
-                    #self.row * 16, # 이미지의 bottom
-                    #16, # 이미지의 사용할 크기
-                    #16, # 이미지의 사용할 크기
-                    #(ScrollX.ScrollX) + 25 + self.x * 50, # 그림 위치
-                    #25 + self.y * 50 , # 그림 위치
-                    #50, # 그림 너비
-                    #50) # 그림 너비
         self.Image.clip_draw(
             self.col * 16,  # 이미지의 left
             self.row * 16,  # 이미지의 bottom
