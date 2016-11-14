@@ -1,6 +1,7 @@
 import game_framework
 from pico2d import *
 import Stage
+import Maptool
 
 name = "Logo"
 main = None
@@ -67,6 +68,7 @@ def handle_events():
                 game_framework.quit()
             elif PosY == 200:
                 print("Enter MapTool")
+                game_framework.change_state(Maptool)
             elif PosY == 250:
                 print("Enter Stage")
                 game_framework.change_state(Stage)

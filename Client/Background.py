@@ -21,25 +21,25 @@ class Background:
         self.backcastle.draw(700 + ScrollX.ScrollX * 0.03, 330, 200, 370)
 
         for x in range(0, 3):
-            self.backforest.draw((300 + ScrollX.ScrollX * 0.05) + 900 * x, 110, 900, 220)
+            self.backforest.draw((300 + ScrollX.ScrollX * 0.05) + 900 * x, 150, 900, 220)
 
         for x in range(0, 200):
             if 0 == x % 2:
-                self.backtree1.draw((ScrollX.ScrollX * 0.2) + 150 * x, 190, 180, 230)
+                self.backtree1.draw((ScrollX.ScrollX * 0.2) + 150 * x, 240, 180, 230)
             else:
-                self.backtree1.draw((ScrollX.ScrollX * 0.2) + 150 * x, 190, 180, 260)
+                self.backtree1.draw((ScrollX.ScrollX * 0.2) + 150 * x, 240, 180, 260)
 
         for x in range(0, 200):
             if 0 == x % 2:
-                self.backtree2.draw((ScrollX.ScrollX * 0.4) + 250 * x, 190, 190, 330)
+                self.backtree2.draw((ScrollX.ScrollX * 0.4) + 250 * x, 230, 190, 330)
             else:
-                self.backtree2.draw((ScrollX.ScrollX * 0.4) + 250 * x, 200, 190, 350)
+                self.backtree2.draw((ScrollX.ScrollX * 0.4) + 250 * x, 240, 190, 350)
 
         for x in range(0, 200):
             if 0 == x % 2:
-                self.backtree2.draw((ScrollX.ScrollX * 0.6) + 300 * x, 190, 210, 420)
+                self.backtree2.draw((ScrollX.ScrollX * 0.6) + 300 * x, 230, 210, 420)
             else:
-                self.backtree2.draw((ScrollX.ScrollX * 0.6) + 300 * x, 220, 210, 450)
+                self.backtree2.draw((ScrollX.ScrollX * 0.6) + 300 * x, 260, 210, 450)
 
     def handle_event(self, event):
         if event.type == SDL_KEYDOWN and event.key == SDLK_LEFT:

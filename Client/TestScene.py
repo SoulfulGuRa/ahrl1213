@@ -19,8 +19,6 @@ def update():
     player.update()
     scarab.update()
 
-    delay(0.05)
-
 def draw():
     clear_canvas()
 

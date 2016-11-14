@@ -3,31 +3,32 @@ from pico2d import *
 import Background
 import TestScene
 import Player
+import Tile
 
 name = "Stage"
 
 def enter():
-   global background, player
+   global background, player, tile
    background = Background.Background()
    player = Player.Player()
+   tile = Tile.Tile(0, 0, 0, 0)
 
 def exit():
-    global background, player
+    global background, player, tile
     del(background)
     del(player)
+    del(tile)
 
 def update():
     background.update()
     player.update()
-    delay(0.05)
-    # Delay 부분 없애자 타임값 가져와서
-    # 루프 수정
 
 def draw():
     clear_canvas()
 
     background.draw()
     player.draw()
+    tile.draw()
 
     update_canvas()
 
