@@ -32,7 +32,7 @@ class Player:
     def __init__(self):
         global ScrollX
         ScrollX = Static
-        self.mapscale = 2000
+        self.mapscale = 10000
         self.x, self.y = 300, 150
         self.frame = 0
         self.state = self.IDLE

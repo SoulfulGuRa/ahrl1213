@@ -37,7 +37,7 @@ class Background:
 
         for x in range(0, 200):
             if 0 == x % 2:
-                self.backtree2.draw((ScrollX.ScrollX * 0.6) + 300 * x, 230, 210, 420)
+                self.backtree2.draw((ScrollX.ScrollX * 0.6) + 300 * x, 240, 210, 420)
             else:
                 self.backtree2.draw((ScrollX.ScrollX * 0.6) + 300 * x, 260, 210, 450)
 

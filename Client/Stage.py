@@ -11,7 +11,17 @@ def enter():
    global background, player, tile
    background = Background.Background()
    player = Player.Player()
-   tile = Tile.Tile(0, 0, 0, 0)
+   tile = []
+   #tile = Tile.Tile(0, 0, 0, 0)
+   for y in range(0, 2):
+       for x in range(0, 200):
+           if y == 1:
+               a = 2
+               b = 3
+           else:
+               a = 3
+               b = 6
+           tile.append(Tile.Tile(a, b, x, y))
 
 def exit():
     global background, player, tile
@@ -28,7 +38,8 @@ def draw():
 
     background.draw()
     player.draw()
-    tile.draw()
+    for x in range(len(tile)):
+        tile[x].draw()
 
     update_canvas()
 
