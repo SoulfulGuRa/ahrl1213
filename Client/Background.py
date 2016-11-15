@@ -43,14 +43,10 @@ class Background:
 
     def handle_event(self, event):
         if event.type == SDL_KEYDOWN and event.key == SDLK_LEFT:
-            print('LeftDown')
             self.LeftKey = True
         elif event.type == SDL_KEYUP and event.key == SDLK_LEFT:
-            print('LeftUp')
             self.LeftKey = False
         elif event.type == SDL_KEYDOWN and event.key == SDLK_RIGHT:
-            print('RightDown')
             self.RightKey = True
         elif event.type == SDL_KEYUP and event.key == SDLK_RIGHT:
-            print('RightUp')
             self.RightKey = False

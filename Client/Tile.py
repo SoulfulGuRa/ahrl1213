@@ -12,6 +12,7 @@ class Tile:
         self.col = col
         self.x = x
         self.y = y
+        self.boxdraw = False
 
     def update(self):
         pass
@@ -26,10 +27,22 @@ class Tile:
             25 + self.y * 50,  # 그림 위치
             50,  # 그림 너비
             50)  # 그림 너비
+        if self.boxdraw == True:
+            draw_rectangle(*self.get_bb())
 
-        draw_rectangle((ScrollX.ScrollX) + (25 + self.x * 50) - 25, (25 + self.y * 50) - 25, (ScrollX.ScrollX) + (25 + self.x * 50) + 25, (25 + self.y * 50) + 25)
+    def get_info(self):
+        return (ScrollX.ScrollX) + (50 * self.x) + 25, (50 * self.y) + 25, 25
+
+    def get_bb(self):
+        return (ScrollX.ScrollX) + (self.x * 50), (self.y * 50), (ScrollX.ScrollX) + (self.x * 50) + 50, (self.y * 50) + 50
 
     def handle_event(self, event):
-        pass
+        if event.type == SDL_KEYDOWN and event.key == SDLK_TAB:
+            self.boxdraw = True
+        elif event.type == SDL_KEYUP and event.key == SDLK_TAB:
+            self.boxdraw = False
+
+    def setboxdraw(self, boxdraw):
+        self.boxdraw = boxdraw
 
 
